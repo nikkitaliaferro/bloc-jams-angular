@@ -1,9 +1,9 @@
 (function({
-    function LandingCtrl() {  
+    function LandingCtrl() {
         this.heroTitle = "Turn the Music Up!";
     }
-    
-    angular
-      .module('blocjams')
-      .controller('LandingCtrl, LandingCtrl');
+
+        angular
+        .module('blocjams')
+        .controller('LandingCtrl', LandingCtrl);
     })();
