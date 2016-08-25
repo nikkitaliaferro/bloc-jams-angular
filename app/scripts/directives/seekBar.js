@@ -38,6 +38,11 @@
                 return {width: percentString()};
             };
 
+            // 9.1 - Assignment - method that updates the position of the seek bar thumb
+            scope.thumbStyle = function() {
+                return {left: percentString()};
+            };
+
             /**
             * @desc Updates seek bar valuse based on 
             * @type
