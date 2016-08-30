@@ -15,6 +15,14 @@
           var currentBuzzObject = null;
 
           /**
+          * @desc set current song volume
+          * @type {Number} volume
+          **/
+          var currentVolume = 80;
+          SongPlayer.initialVolume = 80;
+          SongPlayer.maxVolume = 100;
+
+          /**
           * @function setSong
           * @desc Stops currently playing song and loads new audio file as currentBuzzObject
           * @param {Object} song
@@ -168,6 +176,20 @@
               }
 
           };
+
+          //attribute to hold the value of the volume.
+          SongPlayer.volume = null;
+          /**
+          * @function setVolume
+          * @desc method to update the volume on change.
+          * @param {Number} setVolume
+          **/
+          SongPlayer.setVolume = function(volume) {
+            if (currentBuzzObject) {
+                currentBuzzObject.setVolume(volume);    
+              }
+              SongPlayer.volume = volume;
+          };  
 
           return SongPlayer;
           }
